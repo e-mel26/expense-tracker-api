@@ -5,8 +5,8 @@ from flask_smorest import Api
 
 db = SQLAlchemy(
     engine_options={
-        "pool_pre_ping": True,   # refresh dead connections automatically
-        "pool_recycle": 300,     # recycle connections every 5 minutes
+        "pool_pre_ping": True,
+        "pool_recycle": 300,
     }
 )
 

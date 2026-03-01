@@ -1,25 +1,27 @@
-from flask import Flask
 import os
+from flask import Flask
+
+# Optional: only used locally
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
 
 from .extensions import db, jwt, migrate, api
 
 
 def create_app():
-    # Only load .env locally (Render provides env vars in dashboard)
-    if os.getenv("RENDER") is None:
-        try:
-            from dotenv import load_dotenv
-            load_dotenv()
-        except ImportError:
-            pass
+    # Load .env ONLY when running locally (not on Render)
+    if load_dotenv and os.getenv("RENDER") is None:
+        load_dotenv()
 
     app = Flask(__name__)
 
-    # Load config (reads DATABASE_URL, JWT_SECRET_KEY, etc.)
+    # Load config (expects env vars on Render)
     from .config import Config
     app.config.from_object(Config)
 
-    # Init extensions
+    # Initialize extensions
     db.init_app(app)
     jwt.init_app(app)
     migrate.init_app(app, db)
