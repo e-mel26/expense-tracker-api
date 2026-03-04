@@ -53,12 +53,14 @@ https://expense-tracker-api-b2qa.onrender.com/expenses
 
 ![Create Expense](docs/screenshots/create-expense.png)
 
+---
+
 ### List Expenses
 
 ![List Expenses](docs/screenshots/list-expenses.png)
 
+---
+
 ### Monthly Summary
 
 ![Monthly Summary](docs/screenshots/monthly-summary.png)
-
-
