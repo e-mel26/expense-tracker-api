@@ -1,51 +1,64 @@
-# Expense Tracker API
+Expense Tracker API
 
 A RESTful expense tracking API built with Flask, SQLAlchemy, and JWT authentication.
+This API allows users to securely manage expenses, categorize them, and view monthly spending summaries.
 
-## Features
-- User authentication (JWT)
-- Create, update, and delete expenses
-- Categorize expenses
-- Monthly expense summary analytics
-- Deployed API
+Features
 
-## Tech Stack
-- Python
-- Flask
-- SQLAlchemy
-- Marshmallow
-- JWT Authentication
-- PostgreSQL
-- Render (deployment)
+User authentication with JWT
 
-## API Endpoints
+Create, update, and delete expenses
 
-### Auth
-POST /auth/register  
-POST /auth/login  
+Categorize expenses
 
-### Expenses
-GET /expenses  
-POST /expenses  
-PUT /expenses/{id}  
+Monthly expense summary analytics
+
+PostgreSQL database
+
+Deployed API
+
+Tech Stack
+
+Python
+
+Flask
+
+SQLAlchemy
+
+Marshmallow
+
+JWT Authentication
+
+PostgreSQL
+
+Render (deployment)
+
+API Endpoints
+Auth
+
+POST /auth/register
+POST /auth/login
+
+Expenses
+
+GET /expenses
+POST /expenses
+PUT /expenses/{id}
 DELETE /expenses/{id}
 
-### Analytics
+Analytics
+
 GET /expenses/summary/monthly?year=<YYYY>
 
-## Deployment
-API is deployed on Render.
+Deployment
+
+The API is deployed on Render.
 
 Example request:
 
-GET
-https://expense-tracker-api-b2qa.onrender.com/expenses
-
-## Example Response
-{
-  "month": "2026-03",
-  "total": 118.25
-}
+GET https://expense-tracker-api-b2qa.onrender.com/expenses
+Example Response
+FLASK_ENV=development
 
 ## Screenshots
 
@@ -64,4 +77,5 @@ https://expense-tracker-api-b2qa.onrender.com/expenses
 ### Monthly Summary
 
 ![Monthly Summary](docs/screenshots/monthly-summary.png)
+
 
