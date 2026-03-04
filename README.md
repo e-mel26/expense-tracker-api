@@ -31,7 +31,7 @@ PUT /expenses/{id}
 DELETE /expenses/{id}
 
 ### Analytics
-GET /expenses/summary/monthly?year=2026
+GET /expenses/summary/monthly?year=<YYYY>
 
 ## Deployment
 API is deployed on Render.
@@ -64,3 +64,4 @@ https://expense-tracker-api-b2qa.onrender.com/expenses
 ### Monthly Summary
 
 ![Monthly Summary](docs/screenshots/monthly-summary.png)
+
