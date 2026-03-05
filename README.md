@@ -1,64 +1,102 @@
-Expense Tracker API
+# Expense Tracker API
 
-A RESTful expense tracking API built with Flask, SQLAlchemy, and JWT authentication.
-This API allows users to securely manage expenses, categorize them, and view monthly spending summaries.
+A RESTful expense tracking API built with **Flask**, **SQLAlchemy**, and **JWT authentication**.
 
-Features
+This API allows users to securely manage their expenses, categorize spending, and generate monthly summaries.
 
-User authentication with JWT
+---
 
-Create, update, and delete expenses
+# Features
 
-Categorize expenses
+- User authentication using **JWT**
+- Create, update, and delete expenses
+- Categorize expenses
+- Monthly expense summary analytics
+- PostgreSQL database
+- Deployed REST API
 
-Monthly expense summary analytics
+---
 
-PostgreSQL database
+# Tech Stack
 
-Deployed API
+- Python
+- Flask
+- SQLAlchemy
+- Marshmallow
+- JWT Authentication
+- PostgreSQL
+- Render (deployment)
 
-Tech Stack
+---
 
-Python
+# API Endpoints
 
-Flask
+## Auth
 
-SQLAlchemy
-
-Marshmallow
-
-JWT Authentication
-
-PostgreSQL
-
-Render (deployment)
-
-API Endpoints
-Auth
+Register a new user
 
 POST /auth/register
+
+Login and receive a JWT token
+
 POST /auth/login
 
-Expenses
+---
+
+## Expenses
+
+Get all expenses
 
 GET /expenses
+
+Create a new expense
+
 POST /expenses
+
+Update an expense
+
 PUT /expenses/{id}
+
+Delete an expense
+
 DELETE /expenses/{id}
 
-Analytics
+---
+
+## Analytics
+
+Get monthly expense totals for a given year
 
 GET /expenses/summary/monthly?year=<YYYY>
 
-Deployment
+Example:
 
-The API is deployed on Render.
+GET /expenses/summary/monthly?year=2026
+
+---
+
+# Deployment
+
+The API is deployed on **Render**.
+
+Base API URL:
+
+https://expense-tracker-api-b2qa.onrender.com
 
 Example request:
 
-GET https://expense-tracker-api-b2qa.onrender.com/expenses
-Example Response
-FLASK_ENV=development
+GET /expenses  
+Authorization: Bearer <your_token>
+
+---
+
+# Example Response
+
+```json
+{
+  "month": "2026-03",
+  "total": 118.25
+}
 
 ## Screenshots
 
