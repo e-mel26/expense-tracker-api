@@ -97,24 +97,19 @@ Authorization: Bearer <your_token>
   "month": "2026-03",
   "total": 118.25
 }
+```
 
 ## Screenshots
 
 ### Create Expense
-
 ![Create Expense](docs/screenshots/create-expense.png)
 
 ---
 
 ### List Expenses
-
 ![List Expenses](docs/screenshots/list-expenses.png)
 
 ---
 
 ### Monthly Summary
-
 ![Monthly Summary](docs/screenshots/monthly-summary.png)
-
-
-
