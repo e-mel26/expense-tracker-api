@@ -81,7 +81,11 @@ The API is deployed on **Render**.
 
 Base API URL:
 
-https://expense-tracker-api-b2qa.onrender.com
+[https://expense-tracker-api-b2qa.onrender.com](https://expense-tracker-api-b2qa.onrender.com)
+
+Health check:
+
+GET /
 
 Example request:
 
@@ -113,3 +117,4 @@ Authorization: Bearer <your_token>
 
 ### Monthly Summary
 ![Monthly Summary](docs/screenshots/monthly-summary.png)
+
